@@ -5,7 +5,7 @@ const app = express();  //Initialize and server ready
 
 app.use(express.static("public")); //use to connect with our index file
 
-let port = 3003;
+let port = process.env.PORT || 3003;
 let server = app.listen(port, ()=>{
     console.log("Listening to port "+ port);
 }) 
